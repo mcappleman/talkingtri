@@ -1,7 +1,8 @@
 let header = document.getElementById('header');
 console.log('Navbar loaded');
 console.log(header);
-console.log(window.location.pathname);
+console.log(window.location.pathname.split('/'));
+let base = window.location.pathname.split('/')[1];
 
 header.innerHTML = `
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -26,24 +27,25 @@ header.innerHTML = `
               style="--bs-scroll-height: 100px"
             >
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/">Home</a>
+                <a class="nav-link${base === '' ? ' active' : ''}" aria-current="page" href="/">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/training">Training</a>
+                <a class="nav-link${base === 'training' ? ' active' : ''}" href="/training">Training</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/racing">Racing</a>
+                <a class="nav-link${base === 'racing' ? ' active' : ''}" href="/racing">Racing</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/nutrition">Nutrition</a>
+                <a class="nav-link${base === 'nutrition' ? ' active' : ''}" href="/nutrition">Nutrition</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/gear">Gear</a>
+                <a class="nav-link${base === 'gear' ? ' active' : ''}" href="/gear">Gear</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/news">News</a>
+                <a class="nav-link${base === 'news' ? ' active' : ''}" href="/news">News</a>
               </li>
             </ul>
+            <!--
             <form class="d-flex">
               <input
                 class="form-control me-2"
@@ -55,6 +57,7 @@ header.innerHTML = `
                 Search
               </button>
             </form>
+            -->
           </div>
         </div>
       </nav>

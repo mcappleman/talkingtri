@@ -50,6 +50,12 @@ h1, h2, h3, h4, h5, h6 {
   .h-md-250 { height: 250px; }
 }
 
+/* Breadcrumbs */
+.breadcrumb {
+  padding: 0.5rem 0;
+  background-color: #f9f9f9;
+}
+
 /* Pagination */
 .blog-pagination {
   margin-bottom: 4rem;
