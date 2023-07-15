@@ -1,3 +1,4 @@
+console.log("nutrition.js was loaded");
 import { getMorePosts, populateArticles } from "/assets/js/postList.js";
 import { buildBreadcrumbs } from "/assets/js/breadcrumb.js";
 
