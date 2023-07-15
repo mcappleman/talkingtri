@@ -10,5 +10,5 @@ buildBreadcrumbs(breadcrumbs);
 let postListLength = 5;
 
 const postList = getMorePosts([], postListLength, subpageName);
-
+console.log(postList);
 populateArticles(postList);
