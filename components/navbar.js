@@ -1,6 +1,7 @@
 let header = document.getElementById("header");
 let base = window.location.pathname.split("/")[1];
 
+console.log("navbar.js was loaded");
 header.innerHTML = `
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
@@ -21,7 +22,7 @@ header.innerHTML = `
           <div class="collapse navbar-collapse" id="navbarScroll">
             <ul
               class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
-              style="--bs-scroll-height: 100px"
+              style="--bs-scroll-height: 200px"
             >
               <li class="nav-item">
                 <a class="nav-link${

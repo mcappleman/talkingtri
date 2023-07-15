@@ -1,6 +1,7 @@
 let footer = document.getElementById("footer");
 let now = new Date();
 footer.classList.add("blog-footer");
+console.log("footer.js was loaded");
 
 footer.innerHTML = `
 <div class="container">
