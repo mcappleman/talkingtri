@@ -1,12 +1,9 @@
-let header = document.getElementById('header');
-console.log('Navbar loaded');
-console.log(header);
-console.log(window.location.pathname.split('/'));
-let base = window.location.pathname.split('/')[1];
+let header = document.getElementById("header");
+let base = window.location.pathname.split("/")[1];
 
 header.innerHTML = `
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
+        <div class="container">
           <a class="navbar-brand" href="/">
             <img src="/assets/images/logo_rectangle_2.png" height="80" />
           </a>
@@ -27,22 +24,34 @@ header.innerHTML = `
               style="--bs-scroll-height: 100px"
             >
               <li class="nav-item">
-                <a class="nav-link${base === '' ? ' active' : ''}" aria-current="page" href="/">Home</a>
+                <a class="nav-link${
+                  base === "" ? " active" : ""
+                }" aria-current="page" href="/">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link${base === 'training' ? ' active' : ''}" href="/training">Training</a>
+                <a class="nav-link${
+                  base === "training" ? " active" : ""
+                }" href="/training">Training</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link${base === 'racing' ? ' active' : ''}" href="/racing">Racing</a>
+                <a class="nav-link${
+                  base === "racing" ? " active" : ""
+                }" href="/racing">Racing</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link${base === 'nutrition' ? ' active' : ''}" href="/nutrition">Nutrition</a>
+                <a class="nav-link${
+                  base === "nutrition" ? " active" : ""
+                }" href="/nutrition">Nutrition</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link${base === 'gear' ? ' active' : ''}" href="/gear">Gear</a>
+                <a class="nav-link${
+                  base === "gear" ? " active" : ""
+                }" href="/gear">Gear</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link${base === 'news' ? ' active' : ''}" href="/news">News</a>
+                <a class="nav-link${
+                  base === "news" ? " active" : ""
+                }" href="/news">News</a>
               </li>
             </ul>
             <!--
