@@ -25,6 +25,7 @@ export function getMorePosts(postList, length, filter) {
 }
 
 function getArticleHtml(post) {
+  console.log(post);
   return `
     <article class="position-relative">
       <h2 class="blog-post-title">
