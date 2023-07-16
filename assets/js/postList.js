@@ -1,4 +1,4 @@
-import data from "../posts.json" assert { type: "json" };
+import data from "../posts.json";
 const posts = data.posts;
 
 export function getMorePosts(postList, length, filter) {
