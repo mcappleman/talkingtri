@@ -213,8 +213,13 @@
     ></script>
     <script>
       function resetCountsOnLoad() {
-        if (!DISQUSWIDGETS) {
-          console.log("No DISQUSWIDGETS yet");
+        try {
+          if (!DISQUSWIDGETS) {
+            console.log("No DISQUSWIDGETS yet");
+            return resetCountsOnLoad();
+          }
+        } catch (e) {
+          console.error(e);
           return resetCountsOnLoad();
         }
         console.log("DISQUSWIDGETS", DISQUSWIDGETS);
