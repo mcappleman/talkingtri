@@ -29,7 +29,7 @@ function getArticleHtml(post) {
       <h2 class="blog-post-title">
         ${post.title}
       </h2>
-      <p class="blog-post-meta">${post.publishedAt}</p>
+      <p class="blog-post-meta">${post.publishedAt} <a href="i${window.location.origin}${post.link}#disqus_thread"></a></p>
       <p class="text-truncate">
         ${post.introduction}
       </p>
