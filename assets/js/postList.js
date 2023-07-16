@@ -1,8 +1,16 @@
-import data from "../posts.json";
-const posts = data.posts;
+const posts = [
+  {
+    id: 1,
+    title: "The Coke Fuel: Why Endurance Athletes Consume Coke During a Race",
+    introduction:
+      "Endurance athletes push their bodies to the limit, conquering miles upon miles in their quest for peak performance. Fueling their bodies effectively becomes crucial during these grueling events, and surprisingly, one beverage that has gained popularity among athletes is Coca-Cola, or simply Coke. While it may seem counterintuitive to consume a sugary carbonated drink during intense physical activity, there are specific reasons why endurance athletes have embraced Coke as a secret weapon to power them through races. In this article, we'll explore the science behind why athletes turn to Coke for a quick boost during a race.",
+    link: "/nutrition/the_coke_fuel.html",
+    tags: ["Nutrition"],
+    publishedAt: "July 7th, 2023",
+  },
+];
 
 export function getMorePosts(postList, length, filter) {
-  console.log(data);
   const startingId = postList.length > 0 ? postList[postList.length - 1].id : 1;
   for (let i = startingId - 1; i < posts.length; i++) {
     let post = posts[i];
