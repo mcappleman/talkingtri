@@ -11,7 +11,6 @@ const posts = [
 ];
 
 export function getMorePosts(postList, length, filter) {
-  console.log(data);
   const startingId = postList.length > 0 ? postList[postList.length - 1].id : 1;
   for (let i = startingId - 1; i < posts.length; i++) {
     let post = posts[i];
