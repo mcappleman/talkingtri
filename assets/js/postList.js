@@ -14,8 +14,6 @@ export function getMorePosts(postList, length, filter) {
   const startingId = postList.length > 0 ? postList[postList.length - 1].id : 1;
   for (let i = startingId - 1; i < posts.length; i++) {
     let post = posts[i];
-    console.log(post);
-    console.log(filter);
     if (filter) {
       if (!post.tags.includes(filter)) continue;
     }
