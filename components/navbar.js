@@ -1,7 +1,6 @@
 let header = document.getElementById("header");
 let base = window.location.pathname.split("/")[1];
 
-console.log("navbar.js was loaded");
 header.innerHTML = `
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
