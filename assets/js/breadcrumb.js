@@ -2,6 +2,7 @@ export function buildBreadcrumbs(breadcrumbList) {
   if (!breadcrumbList) return;
   if (breadcrumbList.length < 1) return;
   const breadcrumb = document.getElementById("breadcrumb");
+  if (!breadcrumb) return;
 
   let breadcrumbHtml = `
     <nav aria-label="breadcrumb">
