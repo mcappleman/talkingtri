@@ -30,13 +30,13 @@ header.innerHTML = `
               </li>
               <li class="nav-item">
                 <a class="nav-link${
-                  base === "training" ? " active" : ""
-                }" href="/training">Training</a>
+                  base === "gear" ? " active" : ""
+                }" href="/gear">Gear</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link${
-                  base === "racing" ? " active" : ""
-                }" href="/racing">Racing</a>
+                  base === "news" ? " active" : ""
+                }" href="/news">News</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link${
@@ -45,13 +45,13 @@ header.innerHTML = `
               </li>
               <li class="nav-item">
                 <a class="nav-link${
-                  base === "gear" ? " active" : ""
-                }" href="/gear">Gear</a>
+                  base === "racing" ? " active" : ""
+                }" href="/racing">Racing</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link${
-                  base === "news" ? " active" : ""
-                }" href="/news">News</a>
+                  base === "training" ? " active" : ""
+                }" href="/training">Training</a>
               </li>
             </ul>
             <!--

@@ -1,7 +1,7 @@
 import { getMorePosts, populateArticles } from "/assets/js/postList.js";
 import { buildBreadcrumbs } from "/assets/js/breadcrumb.js";
 
-const subpageName = "Nutrition";
+const subpageName = "Gear";
 let breadcrumbs = [
   { name: "Home", link: "/" },
   { name: "Gear", link: "/gear" },
