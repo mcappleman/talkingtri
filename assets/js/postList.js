@@ -31,7 +31,7 @@ function getArticleHtml(post) {
       <h2 class="blog-post-title">
         ${post.title}
       </h2>
-      <p class="blog-post-meta">${post.publishedAt} <span class="disqus-comment-count" data-disqus-identifier="${post.disqusIdentifier}">First article</span></p>
+      <p class="blog-post-meta">${post.publishedAt} <span class="disqus-comment-count" data-disqus-identifier="${post.disqusIdentifier}"></span></p>
       <p class="text-truncate">
         ${post.introduction}
       </p>
