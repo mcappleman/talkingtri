@@ -211,21 +211,22 @@
       src="//talkingtri.disqus.com/count.js"
       async
     ></script>
-    <!-- <script>
+    <script>
       function resetCountsOnLoad() {
         try {
-          if (!DISQUSWIDGETS) {
-            console.log("No DISQUSWIDGETS yet");
-            return resetCountsOnLoad();
+          if (!window.DISQUSWIDGETS) {
+            setTimeout(resetCountsOnLoad, 10);
+            return;
           }
         } catch (e) {
           console.error(e);
-          return resetCountsOnLoad();
+          setTimeout(resetCountsOnLoad, 10);
+          return;
         }
         console.log("DISQUSWIDGETS", DISQUSWIDGETS);
         DISQUSWIDGETS.getCount({ reset: true });
       }
       resetCountsOnLoad();
-    </script> -->
+    </script>
   </body>
 </html>
