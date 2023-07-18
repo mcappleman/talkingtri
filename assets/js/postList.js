@@ -3,7 +3,7 @@ const posts = [
     id: 1,
     title: "The Coke Fuel: Why Endurance Athletes Consume Coke During a Race",
     introduction:
-      "Endurance athletes push their bodies to the limit, conquering miles upon miles in their quest for peak performance. Fueling their bodies effectively becomes crucial during these grueling events, and surprisingly, one beverage that has gained popularity among athletes is Coca-Cola, or simply Coke. While it may seem counterintuitive to consume a sugary carbonated drink during intense physical activity, there are specific reasons why endurance athletes have embraced Coke as a secret weapon to power them through races. In this article, we'll explore the science behind why athletes turn to Coke for a quick boost during a race.",
+      "When you hear the drink Coke, what is it that pops into your head? For me, it’s obesity followed closely by sluggish. Yet whenever I watch someone on YouTube or elsewhere doing an ultra endurance race, I see them drinking cans of Coke at almost every aid station. Which immediately makes me wonder, why? Shouldn’t you be drinking some highly tested and formulated sports drink that is designed for these exact scenarios? Maybe, but a lot of those sports drink mixes can be really hard to consume because they do not taste the best. So let’s dive into some reasons why you might stash a Coke at your next transition.",
     link: "/nutrition/the_coke_fuel.html",
     disqusIdentifier: "the_coke_fuel",
     tags: ["Nutrition"],
@@ -26,6 +26,26 @@ export function getMorePosts(postList, length, filter) {
   return postList;
 }
 
+export function getMainFeature(id) {
+  const post = posts.find((article) => article.id === id);
+  const mainFeature = document.getElementById("main-feature");
+  mainFeature.innerHTML = `
+    <div class="p-4 p-md-5 mb-4 text-white bg bg-dark" style="background-image: url(${window.location.origin}${post.bannerImage})">
+      <div class="col-md-6 px-0">
+        <h1 class="display-4 fst-italic">
+          ${post.title}
+        </h1>
+        <p class="lead my-3 text-truncate text-truncate--2">
+          ${post.introduction}
+        </p>
+        <p class="lead mb-0">
+          <a href="${post.link}" class="text-white fw-bold">Continue reading...</a>
+        </p>
+      </div>
+    </div>
+  `;
+}
+
 function getArticleHtml(post) {
   console.log(post);
   return `
@@ -34,7 +54,7 @@ function getArticleHtml(post) {
         ${post.title}
       </h2>
       <p class="blog-post-meta">${post.publishedAt} <span class="disqus-comment-count" data-disqus-identifier="${post.disqusIdentifier}"></span></p>
-      <p class="text-truncate">
+      <p class="text-truncate text-truncate--2">
         ${post.introduction}
       </p>
       <a href="${post.link}" class="stretched-link">Continue reading</a>
