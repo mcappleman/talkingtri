@@ -122,4 +122,16 @@ const posts = [
     thumbnailImage: "/assets/images/coke-square.jpg",
     bannerImage: "/assets/images/coke-rectangle.jpg",
   },
+  {
+    id: 2,
+    title: "Training Motivation: My Top 7 YouTube Channels (2023)",
+    introduction:
+      "Sometimes training is fun and rewarding, but other times it is daunting. In those daunting times, doing a training session can be one of the last things that I want to do. It just seems awful. Do I really want to push myself that hard? I could just continue to happily scroll through my phone or get a couple extra hours of sleep. Which if you have a full time job and kids at home, those extra hours of sleep are all the more tempting. One of the easiest ways that I have found to find motivation is to take a step back and enjoy a YouTube video. I find that once the video has ended, I cannot wait to tackle the training session that I have on my calendar. I start to remind myself of the bigger picture and can get myself out of my current wallowing and yearning for instant gratification. So here is a list of my go to triathlon related YouTube channels to give me that extra boost I need.",
+    link: "/training/top-tri-youtube-2023.html",
+    disqusIdentifier: "top-tri-youtube-2023",
+    tags: ["Training"],
+    publishedAt: "July 19th, 2023",
+    thumbnailImage: "/assets/images/coke-square.jpg",
+    bannerImage: "/assets/images/coke-rectangle.jpg",
+  },
 ];
