@@ -7,7 +7,7 @@ const posts = [
     link: "/nutrition/the_coke_fuel.html",
     disqusIdentifier: "the_coke_fuel",
     tags: ["Nutrition"],
-    publishedAt: "July 7th, 2023",
+    publishedAt: "July 18th, 2023",
   },
 ];
 
