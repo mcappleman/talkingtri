@@ -97,7 +97,7 @@ article.blog-post h3 {
   color: #727272;
 }
 #main-feature > .bg {
-  background-size: 100% auto;
+  background-size: cover;
   background-blend-mode: overlay;
 }
 .secondary-feature-thumbnail {
