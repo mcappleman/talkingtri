@@ -30,7 +30,7 @@ export function getMainFeature(id) {
   const post = posts.find((article) => article.id === id);
   const mainFeature = document.getElementById("main-feature");
   mainFeature.innerHTML = `
-    <div class="p-4 p-md-5 mb-4 text-white bg bg-dark" style="background-image: url(${window.location.origin}${post.bannerImage})">
+    <div class="p-4 p-md-5 mb-4 text-white bg bg-dark position-relative" style="background-image: url(${window.location.origin}${post.bannerImage})">
       <div class="col-md-6 px-0">
         <h1 class="display-4 fst-italic">
           ${post.title}
@@ -39,7 +39,7 @@ export function getMainFeature(id) {
           ${post.introduction}
         </p>
         <p class="lead mb-0">
-          <a href="${post.link}" class="text-white fw-bold">Continue reading...</a>
+          <a href="${post.link}" class="text-white fw-bold stretched-link">Continue reading...</a>
         </p>
       </div>
     </div>
