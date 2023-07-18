@@ -8,6 +8,8 @@ const posts = [
     disqusIdentifier: "the_coke_fuel",
     tags: ["Nutrition"],
     publishedAt: "July 18th, 2023",
+    thumbnailImage: "/assets/images/coke-square.jpg",
+    bannerImage: "/assets/images/coke-rectangle.jpg",
   },
 ];
 
