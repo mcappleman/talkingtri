@@ -111,18 +111,6 @@ export function populateArticles(postList) {
 
 const posts = [
   {
-    id: 1,
-    title: "The Coke Fuel: Why Endurance Athletes Consume Coke During a Race",
-    introduction:
-      "When you hear the drink Coke, what is it that pops into your head? For me, it’s obesity followed closely by sluggish. Yet whenever I watch someone on YouTube or elsewhere doing an ultra endurance race, I see them drinking cans of Coke at almost every aid station. Which immediately makes me wonder, why? Shouldn’t you be drinking some highly tested and formulated sports drink that is designed for these exact scenarios? Maybe, but a lot of those sports drink mixes can be really hard to consume because they do not taste the best. So let’s dive into some reasons why you might stash a Coke at your next transition.",
-    link: "/nutrition/the_coke_fuel.html",
-    disqusIdentifier: "the_coke_fuel",
-    tags: ["Nutrition"],
-    publishedAt: "July 18th, 2023",
-    thumbnailImage: "/assets/images/coke-square.jpg",
-    bannerImage: "/assets/images/coke-rectangle.jpg",
-  },
-  {
     id: 2,
     title: "Training Motivation: My Top 7 YouTube Channels (2023)",
     introduction:
@@ -133,5 +121,17 @@ const posts = [
     publishedAt: "July 24th, 2023",
     thumbnailImage: "/assets/images/alexander-shatov-youtube-square.jpg",
     bannerImage: "/assets/images/christian-wiediger-youtube-rectangle.jpg",
+  },
+  {
+    id: 1,
+    title: "The Coke Fuel: Why Endurance Athletes Consume Coke During a Race",
+    introduction:
+      "When you hear the drink Coke, what is it that pops into your head? For me, it’s obesity followed closely by sluggish. Yet whenever I watch someone on YouTube or elsewhere doing an ultra endurance race, I see them drinking cans of Coke at almost every aid station. Which immediately makes me wonder, why? Shouldn’t you be drinking some highly tested and formulated sports drink that is designed for these exact scenarios? Maybe, but a lot of those sports drink mixes can be really hard to consume because they do not taste the best. So let’s dive into some reasons why you might stash a Coke at your next transition.",
+    link: "/nutrition/the_coke_fuel.html",
+    disqusIdentifier: "the_coke_fuel",
+    tags: ["Nutrition"],
+    publishedAt: "July 18th, 2023",
+    thumbnailImage: "/assets/images/coke-square.jpg",
+    bannerImage: "/assets/images/coke-rectangle.jpg",
   },
 ];
