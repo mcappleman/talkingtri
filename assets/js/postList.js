@@ -130,8 +130,8 @@ const posts = [
     link: "/training/top-tri-youtube-2023.html",
     disqusIdentifier: "top-tri-youtube-2023",
     tags: ["Training"],
-    publishedAt: "July 19th, 2023",
-    thumbnailImage: "/assets/images/coke-square.jpg",
-    bannerImage: "/assets/images/coke-rectangle.jpg",
+    publishedAt: "July 24th, 2023",
+    thumbnailImage: "/assets/images/alexander-shatov-youtube-square.jpg",
+    bannerImage: "/assets/images/christian-wiediger-youtube-rectangle.jpg",
   },
 ];
