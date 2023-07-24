@@ -101,9 +101,9 @@ article.blog-post h3 {
   background-blend-mode: overlay;
 }
 .secondary-feature-thumbnail {
-  max-height: 250px;
-  float: right;
+  height: 250px;
   max-width: 200px;
+  object-fit: cover;
 }
 
 /*
