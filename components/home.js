@@ -10,5 +10,5 @@ let postListLength = 5;
 const postList = getMorePosts([], postListLength);
 
 populateArticles(postList);
-getMainFeature(1);
-populateSecondaryFeatureArticles(2, 1);
+getMainFeature(3);
+populateSecondaryFeatureArticles(1, 2);

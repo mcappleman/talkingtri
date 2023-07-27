@@ -73,7 +73,7 @@ export function getMainFeature(id) {
   const post = getArticleById(id);
   const mainFeature = document.getElementById("main-feature");
   mainFeature.innerHTML = `
-    <div class="p-4 p-md-5 mb-4 text-white bg bg-dark position-relative" style="background-image: url(${window.location.origin}${post.bannerImage})">
+    <div class="p-4 p-md-5 mb-4 text-white bg bg-dark position-relative" style="background-image: url(${window.location.origin}${post.bannerImage}); background-position: center;">
       <div class="col-md-6 px-0">
         <h1 class="display-4 fst-italic">
           ${post.title}
@@ -110,6 +110,18 @@ export function populateArticles(postList) {
 }
 
 const posts = [
+  {
+    id: 3,
+    title: "PTO US Open 2023 Preview",
+    introduction:
+      "The next big PTO race is upon us and it is truly bringing out the best of the best. I am very excited to watch this race unfold. I believe that this will be the biggest and best race of the year. The PTO was wise to combine this event with the USAT Nationals race to ensure there would be many fans from around the USA there. It should be a fun one, just check out the trailer below.",
+    link: "/racing/pto-us-open-2023-preview.html",
+    disqusIdentifier: "pto-us-open-2023-preview",
+    tags: ["Racing"],
+    publishedAt: "July 27th, 2023",
+    thumbnailImage: "/assets/images/mark-rohan-milwaukee-square.jpg",
+    bannerImage: "/assets/images/pto-us-open-2023-rectangle.jpg",
+  },
   {
     id: 2,
     title: "Training Motivation: My Top 7 YouTube Channels (2023)",
