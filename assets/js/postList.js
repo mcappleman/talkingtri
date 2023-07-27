@@ -118,7 +118,7 @@ const posts = [
     link: "/racing/pto-us-open-2023-preview.html",
     disqusIdentifier: "pto-us-open-2023-preview",
     tags: ["Racing"],
-    publishedAt: "July 26th, 2023",
+    publishedAt: "July 27th, 2023",
     thumbnailImage: "/assets/images/mark-rohan-milwaukee-square.jpg",
     bannerImage: "/assets/images/pto-us-open-2023-rectangle.jpg",
   },
