@@ -141,7 +141,35 @@
               will start, and how can you watch.
             </p>
             <h3 id="mens-start-list">Men's Start List</h3>
+            <table
+              class="table table-striped table-bordered table-responsive"
+              id="mensStartList"
+              style="width: 100%"
+            >
+              <tfoot>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+              </tfoot>
+            </table>
             <h3 id="womens-start-list">Women's Start List</h3>
+            <table
+              class="table table-striped table-bordered table-responsive"
+              id="womensStartList"
+              style="width: 100%"
+            >
+              <tfoot>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+              </tfoot>
+            </table>
             <h3 id="how-to-watch">How to Watch</h3>
             <p>
               The race will start at 4 pm local time, which is 11 pm CET, on
@@ -158,8 +186,10 @@
               or GCN+.
             </p>
             <p>
-              For more information, you can checkout the PTO website,
-              https://protriathletes.org/events/how-to-watch/
+              For more information, you can checkout the
+              <a href="https://protriathletes.org/events/how-to-watch/"
+                >PTO website</a
+              >.
             </p>
             <h3 id="conclusion">Conclusion</h3>
             <p>
@@ -196,6 +226,144 @@
         }">Comments Section</a>`;
     </script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script>
+      var tableColumns = [
+        { title: "Name", orderable: true },
+        { title: "Country", orderable: true },
+        { title: "PTO Rank", orderable: true },
+        { title: "Swim", orderable: true },
+        { title: "Bike", orderable: true },
+        { title: "Run", orderable: true },
+      ];
+
+      var mensStartList = [
+        ["Kristian Blummenfelt", "Norway", 1, 15, 3, 1],
+        ["Magnus Ditlev", "Denmark", 2, 22, 1, 10],
+        ["Sam Long", "USA", 4, 147, 2, 11],
+        ["Ben Kanute", "USA", 5, 3, 13, 12],
+        ["Daniel Baekkegard", "Denmark", 8, 5, 18, 6],
+        ["Clement Mignon", "France", 11, 41, 19, 20],
+        ["Aaron Royle", "Australia", 12, 1, 20, 30],
+        ["Florian Angert", "Germany", 13, 6, 11, 48],
+        ["Frederic Funk", "Germany", 14, 44, 5, 75],
+        ["Jason West", "USA", 16, 42, 78, 2],
+        ["Jan Frodeno", "Germany", 17, 14, 25, 18],
+        ["Kirstian Hogenhaug", "Norway", 18, 56, 9, 60],
+        ["Lionel Sanders", "USA", 19, 149, 7, 16],
+        ["Alistair Brownlee", "United Kingdom", 20, 20, 24, 36],
+        ["Bradley Weiss", "South Africa", 21, 25, 35, 14],
+        ["Mathis Margirier", "France", 23, 62, 28, 78],
+        ["Jackson Laundry", "Canada", 24, 106, 31, 19],
+        ["Thomas Bishop", "United Kingdom", 25, 13, 16, 71],
+        ["Gregory Barnaby", "Italy", 29, 74, 63, 23],
+        ["Trevor Foley", "USA", 30, 302, 29, 15],
+        ["Braden Currie", "New Zealand", 31, 36, 51, 32],
+        ["Chris Leiferman", "USA", 33, 140, 26, 35],
+        ["Thor Bendix Madsen", "Denmark", 34, 180, 12, 92],
+        ["David McNamee", "United Kingdom", 36, 78, 38, 40],
+        ["Bart Aernouts", "Belgium", 38, 251, 39, 27],
+        ["Josh Amberger", "Australia", 39, 4, 56, 81],
+        ["Miki Moerck Taagholt", "Denmark", 41, 38, 62, 68],
+        ["Timothy O'Donnell", "USA", 59, 58, 49, 117],
+        ["Marc Dubrick", "USA", 80, 11, 148, 26],
+        ["Marten Van Riel", "Belgium", 0, 0, 0, 0],
+      ];
+
+      var womensStartList = [
+        ["Ashleigh Gentle", "Australia", 1, 16, 10, 2],
+        ["Paula Findlay", "Canada", 5, 25, 3, 11],
+        ["Taylor Knibb", "USA", 6, 6, 2, 33],
+        ["Holly Lawrence", "Great Britain", 9, 8, 12, 21],
+        ["Tamara Jewett", "Canada", 10, 52, 33, 3],
+        ["Kat Matthews", "Great Britain", 14, 36, 22, 7],
+        ["Skye Moench", "USA", 15, 43, 11, 20],
+        ["India Lee", "Great Britain", 16, 15, 14, 50],
+        ["Chelsea Sodaro", "USA", 17, 31, 31, 9],
+        ["Jacelyn McCauley", "USA", 18, 21, 4, 47],
+        ["Marjolaine Pierré", "France", 19, 61, 16, 25],
+        ["Maja Stage Nielsen", "Denmark", 24, 27, 27, 37],
+        ["Jackie Hering", "USA", 27, 75, 39, 8],
+        ["Danielle Lewis", "USA", 28, 139, 19, 14],
+        ["Rebecca Clarke", "New Zealand", 30, 2, 18, 69],
+        ["Jeanni Metzler", "South Africa", 32, 38, 60, 34],
+        ["Anne Reischmann", "Germany", 35, 86, 13, 28],
+        ["Lucy Byram", "United Kingdom", 37, 51, 36, 49],
+        ["Ellie Salthouse", "Australia", 38, 12, 48, 31],
+        ["Rach McBride", "Canada", 41, 55, 35, 70],
+        ["Haley Chura", "USA", 42, 11, 70, 42],
+        ["Ruth Astle", "United Kingdom", 43, 88, 25, 55],
+        ["Giorgia Priarone", "Italy", 45, 96, 61, 22],
+        ["Lesley Smith", "USA", 54, 100, 75, 43],
+        ["Lauren Brandon", "USA", 55, 3, 57, 109],
+        ["Jodie Robertson", "USA", 66, 104, 64, 63],
+        ["Daniela Kleiser", "Germany", 69, 166, 52, 17],
+        ["Annamarie Strehlow", "USA", 106, 179, 116, 100],
+      ];
+
+      $(document).ready(function () {
+        var mensStartListTable = $("#mensStartList").DataTable({
+          order: [[2, "asc"]],
+          lengthMenu: [[-1], ["All"]],
+          sDom: "",
+          data: mensStartList,
+          columns: tableColumns,
+        });
+
+        $("#mensStartList tfoot th").each(function (i) {
+          var title = $(this).text();
+          var htmlString =
+            '<input type="text" class="form-control column-search" placeholder="' +
+            tableColumns[i].title +
+            '" />';
+          $(this).html(htmlString);
+        });
+
+        // Apply the search
+        mensStartListTable.columns().every(function () {
+          var that = this;
+
+          $("input", this.footer()).on("keyup change", function () {
+            if (that.search() !== this.value) {
+              that.search(this.value).draw();
+            }
+          });
+        });
+
+        $("#mensStartList_filter").addClass("hidden");
+
+        var womensStartListTable = $("#womensStartList").DataTable({
+          order: [[2, "asc"]],
+          lengthMenu: [[-1], ["All"]],
+          sDom: "",
+          data: womensStartList,
+          columns: tableColumns,
+        });
+
+        $("#womensStartList tfoot th").each(function (i) {
+          var title = $(this).text();
+          var htmlString =
+            '<input type="text" class="form-control column-search" placeholder="' +
+            tableColumns[i].title +
+            '" />';
+          $(this).html(htmlString);
+        });
+
+        // Apply the search
+        womensStartListTable.columns().every(function () {
+          var that = this;
+
+          $("input", this.footer()).on("keyup change", function () {
+            if (that.search() !== this.value) {
+              that.search(this.value).draw();
+            }
+          });
+        });
+
+        $("#womensStartList_filter").addClass("hidden");
+      });
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
